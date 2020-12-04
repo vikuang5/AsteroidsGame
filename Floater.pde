@@ -4,9 +4,10 @@ class Floater
   protected int[] xCorners;   
   protected int[] yCorners;   
   protected int myColor;   
-  protected double myCenterX, myCenterY;    
+  protected float myCenterX, myCenterY;    
   protected double myXspeed, myYspeed;
   protected double myPointDirection; 
+  protected double rotSpeed;
 
   public void accelerate (double dAmount)   
   {          
@@ -45,7 +46,7 @@ class Floater
     stroke(myColor);    
 
     translate((float)myCenterX, (float)myCenterY);
-  
+
     float dRadians = (float)(myPointDirection*(Math.PI/180));
 
     rotate(dRadians);
